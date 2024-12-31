@@ -1,0 +1,396 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+
+/* globals.css */
+
+/* General Reset and Basic Styles */
+/* globals.css */
+
+/* General Reset and Basic Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  /* background-color: #1a202c; */
+  color: #333;
+  line-height: 1.6;
+}
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar .nav-links a:hover {
+  color: #ff6600;
+}
+
+/* Home Page Styles */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  padding: 2rem;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 600px;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.home-content p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 2rem;
+}
+
+/* About Page Styles */
+.about-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.about-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.about-container p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Projects Page Styles */
+.projects-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Contact Page Styles */
+.contact-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contact-container form input,
+.contact-container form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact-container form button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-container form button:hover {
+  background-color: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .profile-image {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .navbar {
+    /* flex-direction: column; */
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar .nav-links {
+    display: flex;
+    /* flex-direction: column; */
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+
+  .navbar .logo {
+    font-size: 1.25rem;
+  }
+
+  .home-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .home-content p,
+  .about-container p,
+  .project-card p,
+  .contact-container form input,
+  .contact-container form textarea {
+    font-size: 0.875rem;
+  }
+
+  .about-container h2,
+  .projects-container h2,
+  .contact-container h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/* About section */
+
+.about-container {
+  
+  color: white; 
+  padding: 3rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  font-family: 'Helvetica', sans-serif;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* Heading Style */
+.about-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white; 
+  border-bottom: 2px solid #63b3ed;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Paragraph Style */
+.about-paragraph {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: white; 
+}
+
+/* Add Hover Effect for Links */
+a {
+  color: #63b3ed;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2b6cb0; /* Darker blue */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .about-container {
+    padding: 2rem;
+  }
+
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  .about-paragraph {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+/* project section */
+.projects-section {
+ 
+  color: #718096; /* Text color */
+  font-family: 'Helvetica', sans-serif;
+  padding: 6rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: center;
+}
+
+/* Card Styles */
+.card {
+  flex: 0 1 45%; /* Each card takes 45% width */
+  background-color: #333; 
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 200px;
+  margin-bottom: 16px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #f7fafc; 
+  margin: 10px 0;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #cbd5e0; 
+  margin-bottom: 20px;
+}
+
+.card-button {
+  background-color: #6b46c1; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.card-button:hover {
+  background-color: #2f855a;
+}
